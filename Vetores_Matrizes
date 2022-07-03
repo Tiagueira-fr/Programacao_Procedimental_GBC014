@@ -1,0 +1,274 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+
+int main (){
+//  VETORES
+
+/*     exercicio 1
+    int soma, cont = 0;
+    int A[6] = {1, 0, 5, -2, -5, 7};    // Letra a
+
+    soma = A[0]+A[1]+A[5];
+    printf("A soma e: %d\n", soma);     // Letra b
+
+    A[4] = 100;                         // Letra c 
+
+    while (cont < 6)                    // Letra d
+    {
+        printf("Posicao %d : %d \n", cont, A[cont]);
+        cont ++;
+    }
+*/
+
+/*      exercicio 2
+
+    int Vet[8];
+    int x = 0, y = 0, cont;
+    int soma_Vet;
+
+    for ( cont = 0; cont < 8; cont++ ){
+        printf("Insira o valor da posicao %d: ", cont);
+        scanf("%d", &Vet[cont]);
+        printf("\n\n");
+    }
+
+    printf("Insira o Valor da posicao x para a soma : ");
+    scanf("%d", &x);
+    printf("\n");
+        if (x>=8)
+        {
+            printf("Insira novamente o Valor da posicao x para a soma : ");
+            scanf("%d", &x);
+            printf("\n");
+        }
+        
+    printf("\n");
+    printf("Insira o Valor da posicao y para a soma : ");
+    scanf("%d", &y);
+        if (y>=8 && y == x){
+            printf("Insira novamente o Valor da posicao y para a soma : ");
+            scanf("%d", &y);
+            printf("\n");
+        }
+
+    printf("\n");
+
+    soma_Vet = Vet[x] + Vet [y];
+    printf("Sua soma ocorre com as posicoes x = %d e y = %d do vetor\n", x , y );
+    printf("Ovalor da soma e: %d ", soma_Vet);
+*/
+
+/*      exercicio 3
+
+int cont = 0, val_in;
+int Vetor[6];
+
+for (cont=0; cont<6; cont++){
+    printf("Insira o valor das posicoes: ");
+    scanf("%d", &val_in);
+    printf("\n");
+    Vetor[cont]=val_in;
+}
+
+do
+{
+     printf("Valor da posicao %d: ", cont);
+    printf("%d \n", Vetor[cont]);
+    cont--;
+} while ( cont > 0);
+*/
+
+/*      exercicio 4
+
+int val_in, val_show, cont;
+int Vet_valores[5];
+
+for (cont = 0; cont > 5 ; cont++)
+{
+    printf("Insira o valor da posicao %d: ", cont);
+    scanf("%d", &val_in);
+    Vet_valores[cont] = val_in;
+}
+*/
+
+/*
+int i;
+int Vetor [50];
+
+for (i = 0; i < 50 ; i++)
+{
+    (i+5*i)%(i+1);
+    printf("%d", Vetor[i]);
+}
+
+return 0 ;
+*/
+
+
+/*      exercicio 6
+int num_in, num_primo, num_temp, cont, cont1 = 0, cont2 = 0;
+int Vetor[10];
+
+
+
+for (cont = 0; cont < 10; cont ++){         // Preenchimento do Vetor
+printf("Insira os Valores do vetor: ");
+scanf("%d", &num_in);
+Vetor[cont] = num_in;
+}
+
+printf("\n");
+
+     // Devolvendo os numeros primos em tela
+
+do
+{
+    
+} while ( );
+
+*/
+
+/*      exercicio 7
+
+int cont = 0, cont_vet_par = 0, cont_vet_imp = 0;
+int num_in, num_imp, num_par, cont_num_par, cont_num_imp;
+int Vet_imp[6], Vet_par[6];
+
+printf ("Insira seis numeros inteiros para contagem dos pares e impares\n");
+
+//recebimento dos numeros e armazenamento no vetor par e vetor impar
+for(cont = 0; cont <6 ; cont++){
+    printf("Insira o %d º numero : ", cont);
+    scanf("%d", &num_in);
+
+    if (num_in % 2 == 0){
+        Vet_par[cont_vet_par] = num_in;
+        cont_vet_par ++;
+    } else {
+        Vet_imp [cont_vet_imp] = num_in;
+        cont_vet_imp ++;
+            }
+}
+
+printf("\n");
+
+cont_num_par = cont_vet_par;
+cont_num_imp = cont_vet_imp;
+
+// devolvendo em tela os numeros pares 
+printf("A quantidade de numeros pares e :%d \n Os numeros pares armazenados sao: ", cont_num_par);
+    for ( int i1 = 0; i1 < cont_num_par; i1 ++)
+    {
+        printf("%d , ", Vet_par[i1]);
+    }
+    printf("\n");
+// devolvendo em tela os numeros impares
+printf("A quantidade de numeros impares e :%d \n Os numeros impares armazenados sao: ", cont_num_imp);
+    for(int i2 = 0; i2 < cont_num_imp; i2 ++)
+    {
+        printf("%d , ", Vet_imp[i2]);
+    }
+    printf("\n");
+
+printf("\n");
+
+system("PAUSE");
+*/
+
+/*      exercicio 8
+
+float Vetor [10];
+int cont = 0;
+float num_in, num_noVetor, num_armazenado = 0;
+
+printf("Insira 10 numeros diferente para armazenamento\n");
+
+// preenchimento do vetor
+while (cont < 10)
+{
+    printf("Insira o numero da posicao %d : ", cont);
+    scanf("%f", &num_in);
+
+    // condicao de conferencia de duplicatas
+    for (int i = 0; i < cont; i++)
+    {
+        num_armazenado = Vetor [i];
+
+    }
+    
+    // conferencia de duplicatas
+    if (num_in != num_armazenado)
+    {
+        num_noVetor = num_in;
+        Vetor[cont] = num_noVetor;
+    } else {
+        printf("O numero %.1f ja foi inserido, digite um numero diferente : ", num_in);
+        scanf("%f", &num_in);
+            while ( num_in == num_armazenado)
+            {
+                printf("O numero %.1f ja foi inserido, digite um numero diferente : ", num_in);
+                scanf("%f", &num_in);
+            }
+         num_noVetor = num_in;
+         Vetor[cont] = num_noVetor;
+    }
+    cont ++;
+
+}
+
+printf("\n\n");
+
+// devolutiva dos valores do vetor em tela
+printf("Os numeros inseridos no Vetor sao: \n");
+for (int i2 = 0; i2 < 10 ; i2++)
+{
+    printf("%.1f ", Vetor[i2]);
+}
+
+printf("\n\n");
+system("PAUSE");
+return 0 ; 
+*/
+
+// Matrizes
+
+/*      exercicio 1
+int Matrix [4][4], Vetor_Maior[16];
+int cont1  , cont2 ;
+int num_in1, num_in2, num_Maior1, num_Maior2, tamanho;
+
+printf("Insira os valores da matriz para o calculo: \n");
+
+// preenchimento da matriz
+
+for (cont1 = 0; cont1 < 4; cont1++){
+    for (cont2 = 0; cont2 < 4; cont2++){
+        scanf("%d", &Matrix[cont1][cont2]);
+    }
+    num_in1 = Matrix[cont1];
+    num_in2 = Matrix[cont2];
+    if (num_in1 > 10) Vetor_Maior[cont1] = num_in1;
+    if (num_in2 > 10) Vetor_Maior[cont1 + 1] = num_in2;
+}
+
+// devolutiva em tela da matriz
+for (int linha=0; linha < 4; linha++)
+     {
+        for(int coluna=0; coluna<4; coluna++)
+            {printf("%d     ", Matrix[linha][coluna]);}
+            printf("\n");
+     }
+// devolutiva em tela do vetor
+tamanho = strlen (Vetor_Maior);
+printf("\n\nExixtem %d numeros maiores que 10 na matriz", tamanho);
+printf("\n Esses valores sao : ");
+for (int i =0; i < tamanho; i++){
+    printf("%d ", Vetor_Maior[i]);
+}
+*/
+
+system("PAUSE");
+return 0; 
+
+}
